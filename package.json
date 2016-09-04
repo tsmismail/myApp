@@ -1,0 +1,29 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "Hotel business app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsmismail/myApp.git"
+  },
+  "author": "TSMIsmail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsmismail/myApp/issues"
+  },
+  "homepage": "https://github.com/tsmismail/myApp#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "dodge": "^0.6.2",
+    "express": "^4.14.0",
+    "lodash": "^4.15.0",
+    "opener": "^1.4.1",
+    "serve-static": "^1.11.1",
+    "yelp": "^1.0.1"
+  }
+}
