@@ -1,0 +1,67 @@
+input, button {
+    margin-top: 20px;
+    height: 40px !important;
+    margin-bottom: 20px;
+}
+
+.item-detail {
+    background-color: #ffffff;
+
+}
+
+.map-container {
+    margin-top: 10px;
+}
+
+.item-details {
+    margin-left: 125px;
+
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.main-container {
+}
+
+.list-container {
+    height: 885px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.panel-container {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 120px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid red;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.item-address, .item-phone, .item-city, .item-rating-button {
+    margin-left: 15px;
+    font-size: 13px;
+}
+.item-rating-button{
+    width: 30px;
+    height: 30px;
+    background-color: #f5821f;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    float: right;
+    margin-right: 10px;
+    line-height: 30px;
+    border-radius: 7px;
+}

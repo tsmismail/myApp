@@ -1,0 +1,27 @@
+<div class="row main-container ">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 list-container">
+        <div ng-repeat="item in dispalyDetails"
+             class="list grid item-detail element-{{item.id}}"
+             id="{{ item.id }}" ng-click="gotoBusiness(item.url)"
+             ng-mouseover="onMouseOverMarker($event)">
+
+            <div class="panel-container">
+                <div class="pull-left">
+                    <img class="image" ng-src="{{item.image}}"/>
+                </div>
+                <div class="item-details">
+                    <div class="item-name">{{($index + 1) + '. ' +item.name}}</div>
+                    <div class="item-address">{{item.address}}</div>
+                    <div class="item-phone">{{item.phone}}</div>
+                    <div class="item-city">{{item.city}}</div>
+                    <div class="item-rating-button">{{item.rating}}</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div id="map" style="height: 885px;"></div>
+    </div>
+</div>

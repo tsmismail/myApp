@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="businessApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yelp | foursquare </title>
+    <script src="library/angular.min.js"></script>
+    <script src="library/angular-route.min.js"></script>
+    <script src="library/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSbvcezJj5j0HBOeEQ7xEKcwZYmRPRW3A"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/mainController.js"></script>
 </head>
-<body>
-<h1>This my new page</h1>
+<body ng-controller="mainController">
+<div class="container-fluid">
+    <div class="row container-fluid" style="background-color: #ebccd1">
+        <div class="pull-left">
+            <img src="images/title.png" style="margin-top: 10px">
+        </div>
+        <div class="pull-right">
+            <div class="row">
+                <form>
+                    <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                        <input class="form-control" type="text" placeholder="Find...." ng-model="findName" required/>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                        <input class="form-control" type="text" placeholder="Location...." ng-model="location"
+                               required/>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <button type="submit" class="btn btn-info" ng-click="onSearch()" style="">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <ng-view></ng-view>
+</div>
 </body>
 </html>
