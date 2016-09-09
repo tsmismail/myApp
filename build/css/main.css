@@ -1,8 +1,18 @@
-
 input, button {
     margin-top: 20px;
     height: 40px !important;
     margin-bottom: 20px;
+}
+
+.info-title {
+    text-align: center;
+}
+
+.info-title span {
+    display: block;
+    color: #0099FF;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .item-detail {
@@ -14,11 +24,6 @@ input, button {
     margin-top: 10px;
 }
 
-.item-details {
-    margin-left: 125px;
-
-}
-
 .image {
     width: 100px;
     height: 100px;
@@ -28,20 +33,17 @@ input, button {
 }
 
 .list-container {
-    height: 885px;
+    height: 865px;
     overflow-y: auto;
     cursor: pointer;
 }
+
 .panel-container {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
-    height: 120px;
-    border-radius: 5px;
+    height: auto;
     background-color: #ffffff;
-    border: 1px solid red;
+    border: 1px solid;
 }
 
 .item-name {
@@ -53,16 +55,16 @@ input, button {
     margin-left: 15px;
     font-size: 13px;
 }
-.item-rating-button{
+
+.item-rating-button {
     width: 30px;
     height: 30px;
-    background-color: #f5821f;
+    background-color: #0099FF;
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
-    float: right;
-    margin-right: 10px;
     line-height: 30px;
     border-radius: 7px;
+    margin-bottom: 5px;
 }

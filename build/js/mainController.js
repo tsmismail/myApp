@@ -44,16 +44,13 @@ app.controller('mainController', function ($scope, $http, $location, $window) {
                 }
 
                 //Load the google map function
-
                 loadInitMapMarkers();
             } else {
-                console.log('No Results found');
-                alert('No Results found');
+                alert('No Results found please provide valid Inputs');
                 $location.path('/');
             }
         }, function (error) {
             console.error(error);
-            console.log('No error found');
             $location.path('/');
         });
     }
@@ -116,7 +113,7 @@ app.controller('mainController', function ($scope, $http, $location, $window) {
             if (!angular.isUndefined(previousElement)) {
                 previousElement.css({'background-color': '#FFFFFF'});
             }
-            $('.list-container .element-' + number + ' .panel-container').css({'background-color': '#EFF0F1'});
+            $('.list-container .element-' + number + ' .panel-container').css({'background-color': '#B1D8B7'});
             $('.list-container').animate({
                 scrollTop: $('.list-container .element-' + number).get(0).offsetTop
             }, 1000);
@@ -132,7 +129,7 @@ app.controller('mainController', function ($scope, $http, $location, $window) {
         });
 
         var infowindow = new google.maps.InfoWindow({
-            content: _marker.title
+            content:'<div> Name: '+ _marker.title+'</div><div> Address: '+ _marker.address +'</div>'
         });
 
         marker.addListener('mouseover', function () {
@@ -172,6 +169,7 @@ app.controller('mainController', function ($scope, $http, $location, $window) {
                 number: i,
                 position: new google.maps.LatLng(cords.lat, cords.lon),
                 title: locations[i].name,
+                address: locations[i].address,
                 map: map
             });
 
@@ -186,5 +184,12 @@ app.controller('mainController', function ($scope, $http, $location, $window) {
         }else{
             alert('Server is not provided Url')
         }
+    };
+    $scope.itemMouseOver = function(){
+        console.log('display on over')
+    };
+
+    $scope.itemMouseOut = function(){
+        console.log('display on out')
     };
 });

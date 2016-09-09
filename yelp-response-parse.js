@@ -1,5 +1,5 @@
 /**
- * Created by Chiranjeevi on 9/3/2016.
+ * Created by ISMAIL on 9/5/2016.
  */
 
 module.exports = function (data) {

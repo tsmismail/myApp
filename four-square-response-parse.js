@@ -1,13 +1,13 @@
 /**
- * Created by Chiranjeevi on 9/3/2016.
+ * Created by ISMAIL on 9/5/2016.
  */
 
 module.exports = function (data, term) {
 	var parsed  = [];
 	var imagees = 'images/';
 	var coffee  = ['coffee'],
-	    food    = ['food', 'eatery', 'restorant', 'dinner'],
-	    alcohol = ['beer'],
+	    food    = ['food', 'eatery', 'restorant', 'dinner','eat'],
+	    alcohol = ['beer','drink','drinking'],
 	    shop    = ['shopping', 'mall', 'shop', 'fashion'];
 
 	for (var ite of data) {
