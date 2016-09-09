@@ -2,8 +2,14 @@
  * Created by Chiranjeevi on 9/3/2016.
  */
 
-module.exports = function (data) {
-	var parsed = [];
+module.exports = function (data, term) {
+	var parsed  = [];
+	var imagees = 'images/';
+	var coffee  = ['coffee'],
+	    food    = ['food', 'eatery', 'restorant', 'dinner'],
+	    alcohol = ['beer'],
+	    shop    = ['shopping', 'mall', 'shop', 'fashion'];
+
 	for (var ite of data) {
 		var entry = {};
 		if (ite.name) {
@@ -57,8 +63,17 @@ module.exports = function (data) {
 			entry.phone = 'NA';
 		}
 
-
-		entry.photo = 'http://www.megaicons.net/static/img/icons_sizes/8/60/256/science-business-icon.png';
+		if (coffee.indexOf(term) !== -1) {
+			entry.photo = imagees + 'coffee.png';
+		} else if (alcohol.indexOf(term) !== -1) {
+			entry.photo = imagees + 'beer.png';
+		} else if (food.indexOf(term) !== -1) {
+			entry.photo = imagees + 'food.png';
+		} else if (shop.indexOf(term) !== -1) {
+			entry.photo = imagees + 'shop.png';
+		} else {
+			entry.photo = 'http://www.megaicons.net/static/img/icons_sizes/8/60/256/science-business-icon.png';
+		}
 
 
 		if (ite.url) {

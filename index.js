@@ -47,7 +47,7 @@ function getFourSquare(term, location, isCoordinates, callBack) {
 		if (err) {
 			return callBack(err);
 		}
-		return callBack(null, fourParse(venues));
+		return callBack(null, fourParse(venues, term));
 	});
 }
 
